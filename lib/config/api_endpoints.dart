@@ -1,20 +1,5 @@
-import '../features/features.dart';
-
-/// In this file we will be writing all API Endpoints using this application
-
 class ApiEndpoint {
-  // News Server
-  static const rapidUrl = 'https://free-news.p.rapidapi.com';
-  static const news = rapidUrl + '/v1/search';
+  static const baseUrl = 'https://technical-test-front.herokuapp.com';
 
-  // Server Links
-  static const baseUrl = 'https://apps.shibajidebnath.com/';
-  static const api = baseUrl + 'api/';
-
-  // Enqueries Endpoints
-  static const enqueries = api + 'enqueries?populate=*&sort[0]=id%3Adesc';
-  static const enquery = api + 'enqueries';
-
-  // Apps Internals Links
-  static const appLoginUrl = AuthApp.playlists;
+  static const playlists = '$baseUrl/v1/browse/featured-playlists';
 }

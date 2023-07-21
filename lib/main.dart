@@ -1,13 +1,15 @@
-import 'package:clean_architecture/features/app.dart';
+import 'package:appstud/features/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'config/config.dart';
+import 'core/di/services_di.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await dotenv.load(fileName: ".env");
+  setupLocator();
   runApp(const AppStud());
 }
 

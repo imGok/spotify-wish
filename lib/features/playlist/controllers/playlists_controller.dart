@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/playlist/screens/playlists_screen.dart';
+import 'package:appstud/features/playlist/screens/playlists_screen.dart';
 import 'package:flutter/material.dart';
 
 class PlaylistsController extends StatelessWidget {

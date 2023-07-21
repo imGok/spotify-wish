@@ -1,4 +1,4 @@
-import 'package:clean_architecture/features/features.dart';
+import 'package:appstud/features/playlist/controllers/playlists_controller.dart';
 
 import '../core/classes/route_manager.dart';
 

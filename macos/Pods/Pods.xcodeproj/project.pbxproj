@@ -301,13 +301,13 @@
 			path = Flutter;
 			sourceTree = "<group>";
 		};
-		104922113D34B81A3027C64589B8D4D4 /* clean_architecture */ = {
+		104922113D34B81A3027C64589B8D4D4 /* appstud */ = {
 			isa = PBXGroup;
 			children = (
 				612DB0E54C79E63255EEEE62B12F2928 /* macos */,
 			);
-			name = clean_architecture;
-			path = clean_architecture;
+			name = appstud;
+			path = appstud;
 			sourceTree = "<group>";
 		};
 		17F7332370E3C0EB0C6BFB8B8AEEAED3 /* Support Files */ = {
@@ -546,13 +546,13 @@
 			path = .symlinks;
 			sourceTree = "<group>";
 		};
-		4EAD242E6280E17EB20457784454C68C /* clean_architecture */ = {
+		4EAD242E6280E17EB20457784454C68C /* appstud */ = {
 			isa = PBXGroup;
 			children = (
 				DB29CEAB4BB4C013F397CE341711CE04 /* macos */,
 			);
-			name = clean_architecture;
-			path = clean_architecture;
+			name = appstud;
+			path = appstud;
 			sourceTree = "<group>";
 		};
 		4FD7620D90043788AB279683947749D3 /* .. */ = {
@@ -660,13 +660,13 @@
 			path = ephemeral;
 			sourceTree = "<group>";
 		};
-		5F152F41D511CB75A1EA290606792864 /* clean_architecture */ = {
+		5F152F41D511CB75A1EA290606792864 /* appstud */ = {
 			isa = PBXGroup;
 			children = (
 				73BB034E3BC27F5D298CC365DB49BB27 /* macos */,
 			);
-			name = clean_architecture;
-			path = clean_architecture;
+			name = appstud;
+			path = appstud;
 			sourceTree = "<group>";
 		};
 		612DB0E54C79E63255EEEE62B12F2928 /* macos */ = {
@@ -696,13 +696,13 @@
 			path = flutter;
 			sourceTree = "<group>";
 		};
-		64D8FF54B3A50507A58299C9B5475D48 /* clean_architecture */ = {
+		64D8FF54B3A50507A58299C9B5475D48 /* appstud */ = {
 			isa = PBXGroup;
 			children = (
 				46FAC1E708A9659E70377EE4650A42B4 /* macos */,
 			);
-			name = clean_architecture;
-			path = clean_architecture;
+			name = appstud;
+			path = appstud;
 			sourceTree = "<group>";
 		};
 		696C904D167ACF961FDCED5B769F6084 /* project */ = {
@@ -741,19 +741,19 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		6F787E0F3CDE8C848D5A3F565965A082 /* clean_architecture */ = {
+		6F787E0F3CDE8C848D5A3F565965A082 /* appstud */ = {
 			isa = PBXGroup;
 			children = (
 				5668E4E1A4C69EDF437DB0E46F4146E2 /* macos */,
 			);
-			name = clean_architecture;
-			path = clean_architecture;
+			name = appstud;
+			path = appstud;
 			sourceTree = "<group>";
 		};
 		6FA26F179F1A48535DCE0D61880D51C6 /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				5F152F41D511CB75A1EA290606792864 /* clean_architecture */,
+				5F152F41D511CB75A1EA290606792864 /* appstud */,
 			);
 			name = apps;
 			path = apps;
@@ -771,7 +771,7 @@
 		739F5D736407F82E81FEF133E3C0C594 /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				4EAD242E6280E17EB20457784454C68C /* clean_architecture */,
+				4EAD242E6280E17EB20457784454C68C /* appstud */,
 			);
 			name = apps;
 			path = apps;
@@ -863,7 +863,7 @@
 		83565F678E6CD6DAB5A41C4F4A2D61A1 /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				64D8FF54B3A50507A58299C9B5475D48 /* clean_architecture */,
+				64D8FF54B3A50507A58299C9B5475D48 /* appstud */,
 			);
 			name = apps;
 			path = apps;
@@ -1012,7 +1012,7 @@
 		A86F465D7B0604022F0A286502817A7D /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				104922113D34B81A3027C64589B8D4D4 /* clean_architecture */,
+				104922113D34B81A3027C64589B8D4D4 /* appstud */,
 			);
 			name = apps;
 			path = apps;
@@ -1405,7 +1405,7 @@
 		F31C27DA48B1CF9CE882AC660B871B71 /* apps */ = {
 			isa = PBXGroup;
 			children = (
-				6F787E0F3CDE8C848D5A3F565965A082 /* clean_architecture */,
+				6F787E0F3CDE8C848D5A3F565965A082 /* appstud */,
 			);
 			name = apps;
 			path = apps;
