@@ -17,4 +17,6 @@ class AppColors {
       900: Color(0xFF1B5E20),
     },
   );
+
+  static Color? secondaryTextColor = Colors.grey[600];
 }

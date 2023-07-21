@@ -1,3 +1,4 @@
+import 'package:appstud/config/app_colors.dart';
 import 'package:appstud/models/tracks_model.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class TrackListTileWidget extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
         subtitle: Text(track.artists!.map((e) => e.name).join(', '),
-            overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.grey)));
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(color: AppColors.secondaryTextColor)));
   }
 }

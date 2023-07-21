@@ -1,3 +1,4 @@
+import 'package:appstud/config/config.dart';
 import 'package:appstud/core/extensions/int_extension.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +55,7 @@ class PlaylistDetailsAppBarWidget extends StatelessWidget implements PreferredSi
                     Text(
                       AppLocalizations.of(context)!
                           .playlistBy(playlist.owner?.displayName ?? playlist.owner!.id!),
-                      style: TextStyle(fontSize: 15, color: Colors.grey[600]),
+                      style: TextStyle(fontSize: 15, color: AppColors.secondaryTextColor),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
@@ -70,7 +71,7 @@ class PlaylistDetailsAppBarWidget extends StatelessWidget implements PreferredSi
                     Text(AppLocalizations.of(context)!.followers(playlist.tracks!.total!.formatBigNumbers()),
                         style: TextStyle(
                           fontSize: 15,
-                          color: Colors.grey[600],
+                          color: AppColors.secondaryTextColor,
                           overflow: TextOverflow.ellipsis,
                         )),
                   ],
