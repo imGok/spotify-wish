@@ -19,7 +19,7 @@ class PlaylistsDetailsScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: AppColors.primary[900],
+          backgroundColor: const Color.fromARGB(255, 0, 51, 3),
           toolbarHeight: 200,
           automaticallyImplyLeading: false,
           elevation: 4,
@@ -36,7 +36,8 @@ class PlaylistsDetailsScreen extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: tracks!.length,
                   itemBuilder: (context, index) {
-                    return TrackListTileWidget(track: tracks[index].track!);
+                    String? previewUrl = tracks[index].track?.previewUrl;
+                    return TrackListTileWidget(track: tracks[index].track!, previewUrl: previewUrl);
                   },
                 ),
               );
