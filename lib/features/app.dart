@@ -1,12 +1,15 @@
 import 'package:appstud/features/playlist/controllers/playlists_controller.dart';
+import 'package:appstud/features/playlist/controllers/playlists_details_controller.dart';
 
 import '../core/classes/route_manager.dart';
 
-class App extends RouteManager {
+class PlaylistRoutes extends RouteManager {
   static const String name = '';
-  static const String home = '${App.name}/';
+  static const String playlists = '${PlaylistRoutes.name}/playlists';
+  static const String playlistsDetails = '$playlists/details';
 
-  App() {
-    addRoute(App.home, (context) => const PlaylistsController());
+  PlaylistRoutes() {
+    addRoute(PlaylistRoutes.playlists, (context) => const PlaylistsController());
+    addRoute(PlaylistRoutes.playlistsDetails, (context) => const PlaylistsDetailsController());
   }
 }

@@ -6,8 +6,7 @@ import 'package:dio/io.dart';
 import 'package:flutter/foundation.dart';
 
 class Http extends HttpManager {
-  Http({String? baseUrl, Map<String, dynamic>? headers})
-      : super(baseUrl!, headers!);
+  Http({String? baseUrl, Map<String, dynamic>? headers}) : super(baseUrl!, headers!);
 }
 
 class HttpManager {
@@ -27,8 +26,7 @@ class HttpManager {
     if (!kIsWeb) {
       (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
           (HttpClient client) {
-        client.badCertificateCallback =
-            (X509Certificate cert, String host, int port) => true;
+        client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
         return client;
       };
     }
@@ -53,8 +51,8 @@ class HttpManager {
       return response;
     } catch (e) {
       log(e.toString());
+      rethrow;
     }
-    return response!;
   }
 
   Future<Response> post(

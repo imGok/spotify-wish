@@ -8,7 +8,7 @@ class PlaylistsController extends StatelessWidget {
   Widget build(BuildContext context) {
     return Title(
       title: 'Playlists',
-      color: Colors.blue,
+      color: Colors.black,
       child: const PlaylistsScreen(),
     );
   }

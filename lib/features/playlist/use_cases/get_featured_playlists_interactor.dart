@@ -6,7 +6,7 @@ class GetFeaturedPlaylistsInteractor {
 
   GetFeaturedPlaylistsInteractor(this.service);
 
-  Future<FeaturedPlaylists?> execute() async {
-    return await service.getOne();
+  Future<FeaturedPlaylistsResponse?> execute() async {
+    return await service.getOnePlaylist();
   }
 }

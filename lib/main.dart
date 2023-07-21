@@ -22,7 +22,7 @@ class AppStud extends StatelessWidget {
     return MaterialApp(
       title: 'AppStud',
       debugShowCheckedModeBanner: false,
-      initialRoute: App.home,
+      initialRoute: PlaylistRoutes.playlists,
       routes: Routes().routes,
     );
   }

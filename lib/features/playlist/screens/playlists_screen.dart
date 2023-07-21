@@ -1,5 +1,8 @@
 import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/features/app.dart';
 import 'package:appstud/features/playlist/use_cases/get_featured_playlists_interactor.dart';
+import 'package:appstud/features/playlist/widgets/app_bar_widget.dart';
+import 'package:appstud/features/playlist/widgets/playlist_card_item_widget.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:flutter/material.dart';
 
@@ -13,17 +16,9 @@ class PlaylistsScreen extends StatelessWidget {
       future: getFeaturedPlaylistsInteractor.execute(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          final playlists = snapshot.data as FeaturedPlaylists;
+          final playlists = snapshot.data as FeaturedPlaylistsResponse;
           return Scaffold(
-            appBar: AppBar(
-              title: Text(playlists.message!,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 26.0,
-                    fontWeight: FontWeight.bold,
-                  )),
-              backgroundColor: Colors.black,
-            ),
+            appBar: AppBarWidget(title: playlists.message!),
             body: Container(
               padding: const EdgeInsets.all(6.0),
               color: Colors.black,
@@ -34,16 +29,7 @@ class PlaylistsScreen extends StatelessWidget {
                   childAspectRatio: 1.0,
                 ),
                 itemBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5.0),
-                      image: DecorationImage(
-                        image: NetworkImage(playlists.playlists![index].images![0].url!),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  );
+                  return PlaylistCardItemWidget(playlist: playlists.playlists![index]);
                 },
               ),
             ),

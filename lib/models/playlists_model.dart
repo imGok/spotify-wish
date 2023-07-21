@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-class FeaturedPlaylists {
+class FeaturedPlaylistsResponse {
   String? message;
   List<Playlist>? playlists;
-  FeaturedPlaylists({
+  FeaturedPlaylistsResponse({
     this.message,
     this.playlists,
   });
@@ -15,8 +15,8 @@ class FeaturedPlaylists {
     };
   }
 
-  factory FeaturedPlaylists.fromMap(Map<String, dynamic> map) {
-    return FeaturedPlaylists(
+  factory FeaturedPlaylistsResponse.fromMap(Map<String, dynamic> map) {
+    return FeaturedPlaylistsResponse(
       message: map['message'],
       playlists: map['playlists'] != null
           ? List<Playlist>.from(map['playlists']['items']?.map((play) => Playlist.fromMap(play)))
@@ -26,8 +26,8 @@ class FeaturedPlaylists {
 
   String toJson() => json.encode(toMap());
 
-  factory FeaturedPlaylists.fromJson(String source) =>
-      FeaturedPlaylists.fromMap(json.decode(source));
+  factory FeaturedPlaylistsResponse.fromJson(String source) =>
+      FeaturedPlaylistsResponse.fromMap(json.decode(source));
 }
 
 class Playlist {
