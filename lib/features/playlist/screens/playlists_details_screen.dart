@@ -3,6 +3,7 @@ import 'package:appstud/features/playlist/use_cases/get_playlist_tracks_interact
 import 'package:appstud/models/playlists_model.dart';
 import 'package:appstud/models/tracks_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PlaylistsDetailsScreen extends StatelessWidget {
   const PlaylistsDetailsScreen({Key? key}) : super(key: key);
@@ -63,7 +64,8 @@ class PlaylistsDetailsScreen extends StatelessWidget {
                                   fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
                           const SizedBox(height: 5),
                           Text(
-                            'Playlist by ${playlist.owner?.displayName ?? playlist.owner!.id!}',
+                            AppLocalizations.of(context)!
+                                .playlistBy(playlist.owner?.displayName ?? playlist.owner!.id!),
                             style: TextStyle(fontSize: 15, color: Colors.grey[600]),
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -76,7 +78,9 @@ class PlaylistsDetailsScreen extends StatelessWidget {
                           Text(playlist.description!,
                               style: const TextStyle(fontSize: 15, color: Colors.white)),
                           const SizedBox(height: 5),
-                          Text(playlist.tracks!.total.toString(),
+                          Text(
+                              AppLocalizations.of(context)!
+                                  .followers(playlist.tracks!.total.toString()),
                               style: TextStyle(
                                 fontSize: 15,
                                 color: Colors.grey[600],

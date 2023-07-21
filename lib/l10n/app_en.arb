@@ -1,0 +1,24 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "playlistBy": "Playlist by {userName}",
+  "@playlistBy": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "Bob"
+      }
+    }
+  },
+  "followers": "{amount} followers",
+  "@followers": {
+    "placeholders": {
+      "amount": {
+        "type": "String",
+        "example": "50"
+      }
+    }
+  }
+}
