@@ -1,7 +1,7 @@
 import 'package:appstud/core/di/services_di.dart';
-import 'package:appstud/features/app.dart';
 import 'package:appstud/features/playlist/use_cases/get_featured_playlists_interactor.dart';
-import 'package:appstud/features/playlist/widgets/app_bar_widget.dart';
+import 'package:appstud/features/playlist/widgets/appstud_loading.dart';
+import 'package:appstud/features/playlist/widgets/playlist_app_bar_widget.dart';
 import 'package:appstud/features/playlist/widgets/playlist_card_item_widget.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class PlaylistsScreen extends StatelessWidget {
         if (snapshot.hasData) {
           final playlists = snapshot.data as FeaturedPlaylistsResponse;
           return Scaffold(
-            appBar: AppBarWidget(title: playlists.message!),
+            appBar: PlaylistAppBarWidget(title: playlists.message!),
             body: Container(
               padding: const EdgeInsets.all(6.0),
               color: Colors.black,
@@ -39,14 +39,7 @@ class PlaylistsScreen extends StatelessWidget {
             child: Text(snapshot.error.toString()),
           );
         } else {
-          return Center(
-            child: Container(
-              color: Colors.black,
-              child: CircularProgressIndicator(
-                color: Colors.green[800],
-              ),
-            ),
-          );
+          return const AppStudLoading();
         }
       },
     );
