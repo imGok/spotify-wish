@@ -1,3 +1,3 @@
 export './classes/classes.dart';
-export './helpers/helpers.dart';
+export 'extensions/int_extension.dart';
 export './utils/utils.dart';

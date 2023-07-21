@@ -1,3 +1,4 @@
+import 'package:appstud/core/extensions/int_extension.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -65,7 +66,8 @@ class PlaylistDetailsAppBarWidget extends StatelessWidget implements PreferredSi
                     Text(playlist.description!,
                         style: const TextStyle(fontSize: 15, color: Colors.white)),
                     const SizedBox(height: 5),
-                    Text(AppLocalizations.of(context)!.followers(playlist.tracks!.total.toString()),
+                    // couldn't find followers count in the api response
+                    Text(AppLocalizations.of(context)!.followers(playlist.tracks!.total!.formatBigNumbers()),
                         style: TextStyle(
                           fontSize: 15,
                           color: Colors.grey[600],
