@@ -5,6 +5,7 @@ import 'package:appstud/features/playlist/widgets/playlist_app_bar_widget.dart';
 import 'package:appstud/features/playlist/widgets/playlist_card_item_widget.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:flutter/material.dart';
+import 'package:appstud/config/app_colors.dart';
 
 class PlaylistsScreen extends StatelessWidget {
   const PlaylistsScreen({Key? key}) : super(key: key);
