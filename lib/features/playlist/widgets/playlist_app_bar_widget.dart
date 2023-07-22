@@ -9,16 +9,18 @@ class PlaylistAppBarWidget extends StatelessWidget implements PreferredSizeWidge
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title,
-          style: TextStyle(
-            color: AppColors.textColor,
-            fontSize: 26.0,
-            fontWeight: FontWeight.bold,
-          )),
+      title: Text(
+        title,
+        style: TextStyle(
+          color: AppColors.textColor,
+          fontSize: 26.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       backgroundColor: AppColors.backgroundColor,
     );
   }
-  
+
   @override
   Size get preferredSize => const Size.fromHeight(50.0);
 }

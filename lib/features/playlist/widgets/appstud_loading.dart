@@ -8,9 +8,14 @@ class AppStudLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: CircularProgressIndicator(
-        color: AppColors.primary[800],
+    return Container(
+      color: AppColors.backgroundColor,
+      width: double.infinity,
+      height: double.infinity,
+      child: Center(
+        child: CircularProgressIndicator(
+          color: AppColors.primary[800],
+        ),
       ),
     );
   }

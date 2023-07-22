@@ -1,4 +1,4 @@
-import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/core/di/di.dart';
 import 'package:appstud/features/playlist/use_cases/get_featured_playlists_interactor.dart';
 import 'package:appstud/features/playlist/widgets/appstud_loading.dart';
 import 'package:appstud/features/playlist/widgets/error_widget.dart';

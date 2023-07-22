@@ -12,6 +12,6 @@ class ListeningTrack {
   ListeningTrack.empty() {
     songName = 'AppStud Music';
     artistsName = 'Julian KOUNE';
-    url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+    url = 'https://vgmsite.com/soundtracks/princess-mononoke-soundtrack/txsdogib/32%20Mononoke%20Hime%20%28Ending%29.mp3';
   }
 }

@@ -1,5 +1,5 @@
 import 'package:appstud/config/app_colors.dart';
-import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/core/di/di.dart';
 import 'package:appstud/core/extensions/track_extension.dart';
 import 'package:appstud/models/tracks_model.dart';
 import 'package:appstud/services/listening_track_service.dart';
@@ -20,10 +20,11 @@ class TrackListTileWidget extends StatelessWidget {
       title: Text(
         track.name!,
         style: TextStyle(
-            overflow: TextOverflow.ellipsis,
-            color: hasPreviewUrl ? AppColors.textColor : AppColors.disabledColor,
-            fontSize: 16,
-            fontWeight: FontWeight.bold),
+          overflow: TextOverflow.ellipsis,
+          color: hasPreviewUrl ? AppColors.textColor : AppColors.disabledColor,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
       ),
       subtitle: Text(
         track.artists!.map((e) => e.name).join(', '),

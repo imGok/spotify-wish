@@ -1,6 +1,6 @@
 {
-    "name": "clean_archetructure",
-    "short_name": "clean_archetructure",
+    "name": "app_stud",
+    "short_name": "app_stud",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

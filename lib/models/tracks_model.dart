@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:appstud/models/playlists_model.dart';
+import 'package:appstud/models/images_model.dart';
 
 class TracksResponse {
   final List<TrackItemResponse>? tracksItems;
@@ -305,4 +305,31 @@ class ExternalUrls {
       spotify: map['spotify'],
     );
   }
+}
+
+class Tracks {
+  String? href;
+  int? total;
+  Tracks({
+    this.href,
+    this.total,
+  });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'href': href,
+      'total': total,
+    };
+  }
+
+  factory Tracks.fromMap(Map<String, dynamic> map) {
+    return Tracks(
+      href: map['href'],
+      total: map['total'],
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Tracks.fromJson(String source) => Tracks.fromMap(json.decode(source));
 }

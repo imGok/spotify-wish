@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:appstud/config/app_colors.dart';
-import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/core/di/di.dart';
 import 'package:appstud/services/listening_track_service.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +79,7 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
                     _position!.inMilliseconds < _duration!.inMilliseconds)
                 ? _position!.inMilliseconds / _duration!.inMilliseconds
                 : 0.0,
-            semanticsLabel: 'Audio progress',
+            semanticsLabel: 'Audio Progress',
           ),
           Expanded(
             child: Container(

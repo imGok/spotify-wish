@@ -7,7 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'config/config.dart';
-import 'core/di/services_di.dart';
+import 'core/di/di.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

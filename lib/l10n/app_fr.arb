@@ -1,3 +1,29 @@
 {
-    "helloWorld": "Bonjour le monde!"
+  "playlistBy": "Playlist par {userName}",
+  "@playlistBy": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "Bob"
+      }
+    }
+  },
+  "followers": "{amount} suivis",
+  "@followers": {
+    "placeholders": {
+      "amount": {
+        "type": "String",
+        "example": "50"
+      }
+    }
+  },
+  "positionInPlaylist": "Playlist : {position}",
+  "@positionInPlaylist": {
+    "placeholders": {
+      "position": {
+        "type": "String",
+        "example": "2/5"
+      }
+    }
+  }
 }

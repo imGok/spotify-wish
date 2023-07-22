@@ -12,7 +12,7 @@ class GetPlaylistTracksInteractor {
     try {
       final response = await service.getTracks(playlist);
       return response;
-    } catch (e) {
+    } on Exception catch (e) {
       debugPrint(e.toString());
       return null;
     }

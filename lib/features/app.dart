@@ -1,7 +1,7 @@
+import 'package:appstud/core/classes/route_manager.dart';
 import 'package:appstud/features/playlist/controllers/playlists_controller.dart';
 import 'package:appstud/features/playlist/controllers/playlists_details_controller.dart';
 
-import '../core/classes/route_manager.dart';
 
 class PlaylistRoutes extends RouteManager {
   static const String name = '';

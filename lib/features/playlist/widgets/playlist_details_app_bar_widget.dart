@@ -1,5 +1,5 @@
 import 'package:appstud/config/config.dart';
-import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/core/di/di.dart';
 import 'package:appstud/core/extensions/int_extension.dart';
 import 'package:appstud/core/extensions/track_extension.dart';
 import 'package:appstud/models/playlists_model.dart';

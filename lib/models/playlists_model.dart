@@ -1,5 +1,8 @@
 import 'dart:convert';
 
+import 'package:appstud/models/images_model.dart';
+import 'package:appstud/models/tracks_model.dart';
+
 class FeaturedPlaylistsResponse {
   String? message;
   List<Playlist>? playlists;
@@ -100,37 +103,6 @@ class Playlist {
   factory Playlist.fromJson(String source) => Playlist.fromMap(json.decode(source));
 }
 
-class ImagePlaylist {
-  int? height;
-  String? url;
-  int? width;
-  ImagePlaylist({
-    this.height,
-    this.url,
-    this.width,
-  });
-
-  Map<String, dynamic> toMap() {
-    return {
-      'height': height,
-      'url': url,
-      'width': width,
-    };
-  }
-
-  factory ImagePlaylist.fromMap(Map<String, dynamic> map) {
-    return ImagePlaylist(
-      height: map['height'],
-      url: map['url'],
-      width: map['width'],
-    );
-  }
-
-  String toJson() => json.encode(toMap());
-
-  factory ImagePlaylist.fromJson(String source) => ImagePlaylist.fromMap(json.decode(source));
-}
-
 class Owner {
   String? displayName;
   String? href;
@@ -168,31 +140,4 @@ class Owner {
   String toJson() => json.encode(toMap());
 
   factory Owner.fromJson(String source) => Owner.fromMap(json.decode(source));
-}
-
-class Tracks {
-  String? href;
-  int? total;
-  Tracks({
-    this.href,
-    this.total,
-  });
-
-  Map<String, dynamic> toMap() {
-    return {
-      'href': href,
-      'total': total,
-    };
-  }
-
-  factory Tracks.fromMap(Map<String, dynamic> map) {
-    return Tracks(
-      href: map['href'],
-      total: map['total'],
-    );
-  }
-
-  String toJson() => json.encode(toMap());
-
-  factory Tracks.fromJson(String source) => Tracks.fromMap(json.decode(source));
 }
