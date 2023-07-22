@@ -1,6 +1,7 @@
 import 'package:appstud/core/di/services_di.dart';
 import 'package:appstud/features/playlist/use_cases/get_featured_playlists_interactor.dart';
 import 'package:appstud/features/playlist/widgets/appstud_loading.dart';
+import 'package:appstud/features/playlist/widgets/error_widget.dart';
 import 'package:appstud/features/playlist/widgets/playlist_app_bar_widget.dart';
 import 'package:appstud/features/playlist/widgets/playlist_card_item_widget.dart';
 import 'package:appstud/models/playlists_model.dart';
@@ -36,9 +37,7 @@ class PlaylistsScreen extends StatelessWidget {
             ),
           );
         } else if (snapshot.hasError) {
-          return Center(
-            child: Text(snapshot.error.toString()),
-          );
+          return AppStudErrorWidget(errorMessage: snapshot.error.toString());
         } else {
           return const AppStudLoading();
         }
