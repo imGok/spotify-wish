@@ -43,6 +43,7 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
             _position = value;
           }),
         );
+
     _initStreams();
   }
 
@@ -144,6 +145,7 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
         _playerState = PlayerState.stopped;
         _position = Duration.zero;
       });
+      listeningTrackService.playNextTrack();
     });
 
     _playerStateChangeSubscription = player.onPlayerStateChanged.listen((state) {

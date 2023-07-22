@@ -16,39 +16,45 @@ class PlaylistsDetailsScreen extends StatelessWidget {
     GetPlaylistTracksInteractor getPlaylistTracksInteractor =
         locator<GetPlaylistTracksInteractor>();
     Playlist playlist = ModalRoute.of(context)!.settings.arguments as Playlist;
-    return Scaffold(
-        backgroundColor: AppColors.backgroundColor,
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 0, 51, 3),
-          toolbarHeight: 200,
-          automaticallyImplyLeading: false,
-          elevation: 4,
-          flexibleSpace: PlaylistDetailsAppBarWidget(playlist: playlist),
-        ),
-        body: FutureBuilder(
-          future: getPlaylistTracksInteractor.execute(playlist),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              final tracks = (snapshot.data as TracksResponse).tracksItems;
+    return FutureBuilder(
+      future: getPlaylistTracksInteractor.execute(playlist),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          final tracks = (snapshot.data as TracksResponse).tracksItems;
 
-              return Container(
-                padding: const EdgeInsets.all(6.0),
-                child: ListView.builder(
-                  itemCount: tracks!.length,
-                  itemBuilder: (context, index) {
-                    String? previewUrl = tracks[index].track?.previewUrl;
-                    return TrackListTileWidget(track: tracks[index].track!, previewUrl: previewUrl);
-                  },
-                ),
-              );
-            } else if (snapshot.hasError) {
-              return Center(
-                child: Text(snapshot.error.toString()),
-              );
-            } else {
-              return const AppStudLoading();
-            }
-          },
-        ));
+          return Scaffold(
+            backgroundColor: AppColors.backgroundColor,
+            appBar: AppBar(
+              backgroundColor: const Color.fromARGB(255, 0, 51, 3),
+              toolbarHeight: 200,
+              automaticallyImplyLeading: false,
+              elevation: 4,
+              flexibleSpace: PlaylistDetailsAppBarWidget(playlist: playlist, tracks: tracks!),
+            ),
+            body: Container(
+              padding: const EdgeInsets.all(6.0),
+              child: ListView.builder(
+                itemCount: tracks.length,
+                itemBuilder: (context, index) {
+                  String? previewUrl = tracks[index].track?.previewUrl;
+                  return TrackListTileWidget(track: tracks[index].track!, previewUrl: previewUrl);
+                },
+              ),
+            ),
+          );
+        } else if (snapshot.hasError) {
+          return Center(
+            child: Text(snapshot.error.toString()),
+          );
+        } else {
+          return Container(
+            color: AppColors.backgroundColor,
+            width: double.infinity,
+            height: double.infinity,
+            child: const AppStudLoading()
+          );
+        }
+      },
+    );
   }
 }

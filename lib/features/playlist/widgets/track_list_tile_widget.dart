@@ -37,6 +37,6 @@ class TrackListTileWidget extends StatelessWidget {
 
   void setTrackAsListening(TrackInformations track) {
     final listeningTrackService = locator<ListeningTrackService>();
-    listeningTrackService.setTrack(track.toListeningTrack());
+    listeningTrackService.listenOneTrack(track.toListeningTrack());
   }
 }
