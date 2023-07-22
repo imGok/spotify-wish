@@ -81,48 +81,49 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
           ),
           Expanded(
             child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
-                color: Colors.black,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 300,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            listeningTrackService.currentTrack.songName!,
-                            style: const TextStyle(
-                              overflow: TextOverflow.ellipsis,
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+              padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
+              color: AppColors.backgroundColor,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 300,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          listeningTrackService.currentTrack.songName!,
+                          style: TextStyle(
+                            overflow: TextOverflow.ellipsis,
+                            color: AppColors.textColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
-                          Text(
-                            listeningTrackService.currentTrack.artistsName!,
-                            style: TextStyle(
-                              color: AppColors.secondaryTextColor,
-                              fontSize: 14,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: _isPlaying ? _pause : _play,
-                      style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(
-                          side: BorderSide(color: Colors.white, width: 2.0),
                         ),
-                        backgroundColor: Colors.black,
-                      ),
-                      child: _isPlaying ? const Icon(Icons.pause) : const Icon(Icons.play_arrow),
+                        Text(
+                          listeningTrackService.currentTrack.artistsName!,
+                          style: TextStyle(
+                            color: AppColors.secondaryTextColor,
+                            fontSize: 14,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                )),
+                  ),
+                  ElevatedButton(
+                    onPressed: _isPlaying ? _pause : _play,
+                    style: ElevatedButton.styleFrom(
+                      shape: const CircleBorder(
+                        side: BorderSide(color: Colors.white, width: 2.0),
+                      ),
+                      backgroundColor: AppColors.backgroundColor,
+                    ),
+                    child: _isPlaying ? const Icon(Icons.pause) : const Icon(Icons.play_arrow),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

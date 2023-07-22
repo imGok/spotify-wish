@@ -48,9 +48,14 @@ class PlaylistDetailsAppBarWidget extends StatelessWidget implements PreferredSi
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(playlist.name!,
-                        style: const TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+                    Text(
+                      playlist.name!,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.textColor,
+                      ),
+                    ),
                     const SizedBox(height: 5),
                     Text(
                       AppLocalizations.of(context)!
@@ -64,11 +69,15 @@ class PlaylistDetailsAppBarWidget extends StatelessWidget implements PreferredSi
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(playlist.description!,
-                        style: const TextStyle(fontSize: 15, color: Colors.white)),
+                    Text(
+                      playlist.description!,
+                      style: TextStyle(fontSize: 15, color: AppColors.textColor),
+                    ),
                     const SizedBox(height: 5),
                     // couldn't find followers count in the api response
-                    Text(AppLocalizations.of(context)!.followers(playlist.tracks!.total!.formatBigNumbers()),
+                    Text(
+                        AppLocalizations.of(context)!
+                            .followers(playlist.tracks!.total!.formatBigNumbers()),
                         style: TextStyle(
                           fontSize: 15,
                           color: AppColors.secondaryTextColor,

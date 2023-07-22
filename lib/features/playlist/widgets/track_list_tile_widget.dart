@@ -21,7 +21,7 @@ class TrackListTileWidget extends StatelessWidget {
         track.name!,
         style: TextStyle(
             overflow: TextOverflow.ellipsis,
-            color: hasPreviewUrl ? Colors.white : AppColors.disabledColor,
+            color: hasPreviewUrl ? AppColors.textColor : AppColors.disabledColor,
             fontSize: 16,
             fontWeight: FontWeight.bold),
       ),

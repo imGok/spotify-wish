@@ -17,7 +17,7 @@ class PlaylistsDetailsScreen extends StatelessWidget {
         locator<GetPlaylistTracksInteractor>();
     Playlist playlist = ModalRoute.of(context)!.settings.arguments as Playlist;
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.backgroundColor,
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 0, 51, 3),
           toolbarHeight: 200,

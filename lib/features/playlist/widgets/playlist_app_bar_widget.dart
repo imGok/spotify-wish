@@ -1,3 +1,4 @@
+import 'package:appstud/config/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PlaylistAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -9,12 +10,12 @@ class PlaylistAppBarWidget extends StatelessWidget implements PreferredSizeWidge
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title,
-          style: const TextStyle(
-            color: Colors.white,
+          style: TextStyle(
+            color: AppColors.textColor,
             fontSize: 26.0,
             fontWeight: FontWeight.bold,
           )),
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.backgroundColor,
     );
   }
   

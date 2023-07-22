@@ -21,7 +21,7 @@ class PlaylistsScreen extends StatelessWidget {
             appBar: PlaylistAppBarWidget(title: playlists.message!),
             body: Container(
               padding: const EdgeInsets.all(6.0),
-              color: Colors.black,
+              color: AppColors.backgroundColor,
               child: GridView.builder(
                 itemCount: playlists.playlists!.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

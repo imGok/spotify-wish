@@ -20,4 +20,6 @@ class AppColors {
 
   static Color? secondaryTextColor = Colors.grey[600];
   static Color? disabledColor = Colors.grey[900];
+  static Color? backgroundColor = Colors.black;
+  static Color? textColor = Colors.white;
 }
