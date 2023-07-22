@@ -20,5 +20,14 @@
         "example": "50"
       }
     }
+  },
+  "positionInPlaylist": "Playlist : {position}",
+  "@positionInPlaylist": {
+    "placeholders": {
+      "position": {
+        "type": "String",
+        "example": "2/5"
+      }
+    }
   }
 }

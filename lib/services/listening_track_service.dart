@@ -28,6 +28,10 @@ class ListeningTrackService {
     player.play(UrlSource(listeningTracks.first.url!));
   }
 
+  String get currentTrackPositionInPlaylist {
+    return '${currentTrackIndex + 1}/${listeningTracks.length}';
+  }
+
   void playNextTrack() {
     if (currentTrackIndex < listeningTracks.length - 1) {
       currentTrackIndex++;

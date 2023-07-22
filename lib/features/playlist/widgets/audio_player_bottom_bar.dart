@@ -5,6 +5,7 @@ import 'package:appstud/core/di/services_di.dart';
 import 'package:appstud/services/listening_track_service.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AudioPlayerBottomBar extends StatefulWidget {
   const AudioPlayerBottomBar({super.key});
@@ -66,7 +67,7 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 70,
+      height: 80,
       child: Column(
         children: [
           LinearProgressIndicator(
@@ -103,6 +104,15 @@ class _AudioPlayerBottomBarState extends State<AudioPlayerBottomBar> {
                         ),
                         Text(
                           listeningTrackService.currentTrack.artistsName!,
+                          style: TextStyle(
+                            color: AppColors.secondaryTextColor,
+                            fontSize: 14,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        Text(
+                          AppLocalizations.of(context)!.positionInPlaylist(
+                              listeningTrackService.currentTrackPositionInPlaylist),
                           style: TextStyle(
                             color: AppColors.secondaryTextColor,
                             fontSize: 14,
