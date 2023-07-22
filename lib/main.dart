@@ -1,4 +1,6 @@
 import 'package:appstud/features/app.dart';
+import 'package:appstud/features/playlist/widgets/appstud_loading.dart';
+import 'package:appstud/features/playlist/widgets/audio_player_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -24,7 +26,7 @@ class AppStud extends StatelessWidget {
       title: 'AppStud',
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
-        AppLocalizations.delegate, // Add this line
+        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -35,6 +37,21 @@ class AppStud extends StatelessWidget {
       ],
       initialRoute: PlaylistRoutes.playlists,
       routes: Routes().routes,
+      builder: (context, child) {
+        if (child == null) {
+          return const AppStudLoading();
+        }
+        return Overlay(
+          initialEntries: [
+            OverlayEntry(
+              builder: (context) => Scaffold(
+                body: child,
+                bottomNavigationBar: const AudioPlayerBottomBar(),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

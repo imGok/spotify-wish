@@ -1,12 +1,11 @@
 import 'dart:convert';
 
+import 'package:appstud/config/api_endpoints.dart';
+import 'package:appstud/config/app_http.dart';
 import 'package:appstud/core/di/services_di.dart';
 import 'package:appstud/models/playlists_model.dart';
 import 'package:appstud/models/tracks_model.dart';
 import 'package:dio/dio.dart';
-
-import '../../config/api_endpoints.dart';
-import '../../config/app_http.dart';
 
 class PlaylistsService {
   final AppHttp _http = locator<AppHttp>();

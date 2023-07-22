@@ -37,6 +37,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  audioplayers: ^4.1.0
 
 
 dev_dependencies:

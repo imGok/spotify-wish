@@ -1,5 +1,8 @@
 import 'package:appstud/config/app_colors.dart';
+import 'package:appstud/core/di/services_di.dart';
+import 'package:appstud/core/extensions/track_extension.dart';
 import 'package:appstud/models/tracks_model.dart';
+import 'package:appstud/services/listening_track_service.dart';
 import 'package:flutter/material.dart';
 
 class TrackListTileWidget extends StatelessWidget {
@@ -13,7 +16,7 @@ class TrackListTileWidget extends StatelessWidget {
     final hasPreviewUrl = previewUrl != null;
     return ListTile(
       enabled: hasPreviewUrl,
-      onTap: () => {},
+      onTap: () => setTrackAsListening(track),
       title: Text(
         track.name!,
         style: TextStyle(
@@ -30,5 +33,10 @@ class TrackListTileWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void setTrackAsListening(TrackInformations track) {
+    final listeningTrackService = locator<ListeningTrackService>();
+    listeningTrackService.setTrack(track.toListeningTrack());
   }
 }
