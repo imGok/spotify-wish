@@ -33,9 +33,6 @@
 .pub/
 /build/
 
-# Remove App Auth
-.env
-
 # Web related
 lib/generated_plugin_registrant.dart
 
